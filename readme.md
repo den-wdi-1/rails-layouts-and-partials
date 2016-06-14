@@ -88,7 +88,7 @@ Create a new Rails app "views_and_layouts" and scaffold the resource posts:
 ```bash
 rails new views_and_layouts
 cd views_and_layouts
-rails g scaffold Post title content:text
+rails g scaffold post title:string content:text
 rake db:migrate
 ```
 
