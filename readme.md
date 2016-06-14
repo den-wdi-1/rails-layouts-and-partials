@@ -52,7 +52,7 @@ def create
 end
 ```
 
-Based on the result of `@post.save`, the method will execute either the code in the `if` or in the `else`.  The code `format.html` or `format.json` means that Rails will understand the format asked by the user, html or JSON.  We will look at JSON later in the course, so for the moment, we will only look at the lines starting with `format.html`.
+Based on the result of `@post.save`, the method will execute either the code in the `if` or in the `else`.  The code `format.html` or `format.json` means that Rails will understand the format asked by the user, html or JSON.  For the moment, we will only look at the lines starting with `format.html`.
 
 In the `if` case , we can see that in the code executed in the block `redirect_to @post, notice: 'Post was successfully created.'` This code will redirect the request to the show method. `redirect_to` the `@post` object in rails means "go to the method to show only this object".
 
