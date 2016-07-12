@@ -244,3 +244,8 @@ This app only has one layout, but the layout should have a menu with links to th
 - Where do we use the method `render` (2 places)
 - What is the easiest way to go to the show page of a restful controller from another method in this controller?
 - How to render a different layout only for one method?
+
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
