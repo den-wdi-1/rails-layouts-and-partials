@@ -1,23 +1,29 @@
+<!--Hook: Raise your hand if you love writing out thousands of lines of static HTML.  Raise your hand if you love doing tons of DOM manipulation manually.  Ruby, and more specifically Rails, has a lot of power to do this work for us, and today we'll dive into that power, saving us countless hours of coding, and allowing us to change only what we need to change easily and quickly.  Today, we'll be talking about views in Rails.
+-->
+
+<!--2:30 5 minutes -->
+
 # Layouts, Partials, and Views
 
 ### Objectives
 *After this lesson, students will be able to:*
 
-- Describe how templates & views work together
-- Use partials for static content and rendering dynamic content
+- **Describe** how templates & views work together
+- **Use** partials for static content and rendering dynamic content
 
 ### Preparation
 *Before this lesson, students should already be able to:*
 
-- Write HTML
-- Describe how to yield a template in a layout
-- Use Ruby instance variables in templates
-- Use params to store data in instance variables
+- **Write** HTML
+- **Describe** how to yield a template in a layout
+- **Use** Ruby instance variables in templates
+- **Use** params to store data in instance variables
 
-## Views in Rails - Intro (10 mins)
+<!-- 2:35 5 minutes -->
+
+## Views in Rails - Intro
 
 In this lesson we will cover the details of rendering views and best practices for keeping the views DRY.
-
 
 With Sinatra, we've seen that if there is a file called `layout.erb`, this file will be used as the app layout by default.
 
@@ -25,7 +31,11 @@ If this file `layout.erb` contains a yield statement `<%= yield %>`, then the te
 
 This logic is pretty much the same with Ruby on Rails. When the app is created, Rails will automatically add a layout `application.html.erb` in `app/views/layouts/application.html.erb`. This layout already contains a yield statement and all the links to css and js files in the head part of the html document.
 
-## Using views with Rails - Demo (20 mins)
+Take a minute and discuss the views files with your partner.  What is different from Sinatra?  What is the same?
+
+<!-- 2:40 15 minutes -->
+
+## Using views with Rails - Demo
 
 In Rails, the logic for the rendering a view is quite straightforward. Given that every route in Rails will execute a method inside a controller, when the method is executed, Rails will look for:
 
@@ -34,7 +44,7 @@ In Rails, the logic for the rendering a view is quite straightforward. Given tha
 
 For example , if we call `http://localhost:3000/posts`, Rails will execute the method `index` in the controller `posts` and then look for a template located in `app/views/posts/index.html.erb`  This works when the method always renders the same template.
 
-In some cases though, you may want to render a template with a different name than the current method. Lets take a look at this action:
+In some cases though, you may want to render a template with a different name than the current method. Let's take a look at an example action:
 
 ```ruby
 def create
@@ -81,7 +91,9 @@ render file: "/path/to/rails/app/views/books/edit"
 render file: "/path/to/rails/app/views/books/edit.html.erb"
 ```
 
-## Integrating Layouts - Codealong (30 mins)
+<!-- 2:55 25 minutes -->
+
+## Integrating Layouts - Codealong
 
 Create a new Rails app "views_and_layouts" and scaffold the resource posts:
 
@@ -219,7 +231,9 @@ Let's now call the partials in the layout:
 
 Rails will automatically look in the folder `app/views/application/` for a file that is called by the name given to the method `render` with an underscore prefix.
 
-##Independent Practice (You Do) (20 mins)
+<!-- 3:20 20 minutes -->
+
+##Independent Practice (You Do)
 
 Create a Rails app called `fanzine`. This app will have a controller called `home` and four routes called:
 
@@ -237,7 +251,9 @@ You'll have to match these routes with these templates:
 
 This app only has one layout, but the layout should have a menu with links to the four routes. These links should be inside a partial called `menu` and the file should be in `app/views/application`. The menu should appear on every page.
 
-## Conclusion (10 mins)
+<!--3:40 5 minutes -->
+
+## Conclusion
 
 #### Questions
 
