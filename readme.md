@@ -1,7 +1,7 @@
 <!--Hook: Raise your hand if you love writing out thousands of lines of static HTML.  Raise your hand if you love doing tons of DOM manipulation manually.  Ruby, and more specifically Rails, has a lot of power to do this work for us, and today we'll dive into that power, saving us countless hours of coding, and allowing us to change only what we need to change easily and quickly.  Today, we'll be talking about views in Rails.
 -->
 
-<!--2:30 5 minutes -->
+<!--1:00 5 minutes -->
 
 # Layouts, Partials, and Views
 
@@ -19,7 +19,7 @@
 - **Use** Ruby instance variables in templates
 - **Use** params to store data in instance variables
 
-<!-- 2:35 5 minutes -->
+<!-- 1:05 5 minutes -->
 
 <!-- Bring up Sinatra layout.erb -->
 
@@ -39,7 +39,7 @@ This logic is pretty much the same with Ruby on Rails. When the app is created, 
 
 Take a minute and discuss the views files with your partner.  What is different from Sinatra?  What is the same?
 
-<!-- 2:40 15 minutes -->
+<!-- 1:10 15 minutes -->
 
 ## Using views with Rails - Demo
 
@@ -99,7 +99,7 @@ render file: "/path/to/rails/app/views/books/edit.html.erb"
 
 <!-- Raise your hand if this freedom excites you.  Raise your hand if it scares you. -->
 
-<!-- 2:55 25 minutes -->
+<!-- 1:25 25 minutes -->
 
 ## Integrating Layouts - Codealong
 
@@ -249,7 +249,7 @@ Now split up your template with two partials that you render inside your templat
 
 <!-- Catch-up -->
 
-<!-- 3:20 20 minutes -->
+<!-- 1:50 20 minutes -->
 
 ##Independent Practice (You Do)
 
@@ -269,7 +269,7 @@ You'll have to match these routes with these templates:
 
 This app only has one layout, but the layout should have a menu with links to the four routes. These links should be inside a partial called `menu` and the file should be in `app/views/application`. The menu should appear on every page.
 
-<!--3:40 5 minutes -->
+<!--2:10 5 minutes -->
 
 ## Conclusion
 
