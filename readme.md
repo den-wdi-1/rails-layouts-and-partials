@@ -43,7 +43,7 @@ Take a minute and discuss the views files with your partner.  What is different 
 
 ## Using views with Rails - Demo
 
-In Rails, the logic for the rendering a view is quite straightforward. Given that every route in Rails will execute a method inside a controller, when the method is executed, Rails will look for:
+In Rails, the logic for rendering a view is quite straightforward. Given that every route in Rails will execute a method inside a controller, when the method is executed, Rails will look for:
 
 1. A folder inside `views` corresponding to the controller's name (folder `books` for `BooksController`).
 2. A file with the method's name and `.html.erb`.
@@ -97,7 +97,7 @@ render file: "/path/to/rails/app/views/books/edit"
 render file: "/path/to/rails/app/views/books/edit.html.erb"
 ```
 
-<!-- Raise your hand if this freedom excites you.  Raise your hand if it excites you. -->
+<!-- Raise your hand if this freedom excites you.  Raise your hand if it scares you. -->
 
 <!-- 2:55 25 minutes -->
 
@@ -167,6 +167,8 @@ render layout: "sidebar"
 ```
 
 This line will just tell Rails to use the same logic of template rendering, but instead of using the default `application.html.erb`, it will render the template inside `sidebar.html.erb`.
+
+Now make your own sidebar.  Create at least two distinct sections.  Customize the HTML to whatever you want to show up in your app.  Don't forget the `<%= yield %>` tag!
 
 <!-- Catch-up / Half-mast -->
 
@@ -242,6 +244,8 @@ Let's now call the partials in the layout:
 ```
 
 Rails will automatically look in the folder `app/views/application/` for a file that is called by the name given to the method `render` with an underscore prefix.
+
+Now split up your template with two partials that you render inside your template.
 
 <!-- Catch-up -->
 
